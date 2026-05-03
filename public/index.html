@@ -1,0 +1,36 @@
+<body class="bg-[#050505] text-white font-sans min-h-screen overflow-x-hidden">
+  <!-- Glassy Header -->
+  <nav class="backdrop-blur-md bg-white/5 border-b border-white/10 sticky top-0 z-50 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-black tracking-tighter text-cyan-400">PROXY VIP</h1>
+      <div id="userProfile" class="hidden text-sm font-mono bg-white/10 px-4 py-1 rounded-full"></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <main class="container mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <!-- Pricing Cards -->
+      <div class="pricing-card border border-white/10 bg-white/5 backdrop-blur-xl p-6 rounded-3xl text-center hover:border-cyan-500/50 transition-all">
+        <h2 class="text-gray-400 text-sm uppercase">1 Day Pass</h2>
+        <div class="text-4xl font-black my-4">RM10</div>
+        <button onclick="processPurchase(10)" class="w-full bg-cyan-600 py-3 rounded-2xl font-bold hover:bg-cyan-500 shadow-lg shadow-cyan-900/20">BUY NOW</button>
+      </div>
+      <!-- Ulang untuk 20, 30, 50, 100 -->
+    </div>
+  </main>
+
+  <!-- Auth Modal (Username Only) -->
+  <div id="authModal" class="fixed inset-0 bg-black/90 backdrop-blur-xl z-[100] flex items-center justify-center">
+    <div class="w-full max-w-md p-10 bg-white/5 border border-white/10 rounded-[2.5rem] text-center">
+      <h2 class="text-3xl font-bold mb-2">Register Proxy VIP</h2>
+      <p class="text-gray-500 mb-8">No Email. Just choose a username.</p>
+      <input type="text" id="username" placeholder="Username" class="w-full bg-white/5 border border-white/10 p-4 rounded-2xl mb-4 focus:border-cyan-500 outline-none">
+      <input type="password" id="password" placeholder="Password" class="w-full bg-white/5 border border-white/10 p-4 rounded-2xl mb-6 focus:border-cyan-500 outline-none">
+      <button onclick="handleAuth()" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 py-4 rounded-2xl font-bold">START ACCESS</button>
+      <div class="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-2xl text-[10px] text-red-400 uppercase tracking-widest">
+        ⚠️ AMARAN: Sila ingat username/password anda. Kami tidak boleh reset akaun tanpa email!
+      </div>
+    </div>
+  </div>
+</body>
